@@ -70,11 +70,8 @@ It combines sensor fusion, motor control, and modular design to perform navigati
 ## 📌 Current Status  
 
 - ✅ Motor driver tested (forward, backward, turns)  
-- ✅ Basic modular code structure set up  
-- 🔄 Integrating line follower and obstacle avoidance  
-- 🔄 Testing ESP32–STM32 communication  
+- ✅ Basic modular code structure in progress 
 - 🔄 AprilTag-based localization in progress (ESP32 library)  
-- 🔄 RTOS task manager and state machine design in progress  
 - 🔄 Firebase integration with mobile app prototype in progress  
 
 ---
