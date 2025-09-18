@@ -1,0 +1,21 @@
+Movement
+	-IMU
+	-Encoders
+Navigation
+	-Line Follower
+		-Enclosed IR array with continuous lighting
+Positioning
+	-April Tags
+Communication
+	-GPS + Firebase
+	-App Support
+Microcontroller
+	-ESP32
+	-STM32F446ZE
+Position identification
+	-ESP32cam
+Obstacle detection
+	-Ultrasonic sensors
+Package Delivery
+	-OTP system
+	-Priority basis
