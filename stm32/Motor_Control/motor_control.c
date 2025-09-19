@@ -29,25 +29,25 @@ void Motor_Init(void) {
 // -------- Movement Functions --------
 
 // Forward: both motors forward
-void Motor_Forward(uint16_t speed) {
-    if (speed > __HAL_TIM_GET_AUTORELOAD(&htim1)) speed = __HAL_TIM_GET_AUTORELOAD(&htim1);
+void Motor_Forward() {
+   // if (speed > __HAL_TIM_GET_AUTORELOAD(&htim1)) speed = __HAL_TIM_GET_AUTORELOAD(&htim1);
 
-    __HAL_TIM_SET_COMPARE(&htim1, LPWM_A_CHANNEL, speed);
+    __HAL_TIM_SET_COMPARE(&htim1, LPWM_A_CHANNEL, MAX_SPEED);
     __HAL_TIM_SET_COMPARE(&htim1, RPWM_A_CHANNEL, 0);
 
-    __HAL_TIM_SET_COMPARE(&htim1, LPWM_B_CHANNEL, speed);
+    __HAL_TIM_SET_COMPARE(&htim1, LPWM_B_CHANNEL, MAX_SPEED);
     __HAL_TIM_SET_COMPARE(&htim1, RPWM_B_CHANNEL, 0);
 }
 
 // Backward: both motors backward
-void Motor_Backward(uint16_t speed) {
-    if (speed > __HAL_TIM_GET_AUTORELOAD(&htim1)) speed = __HAL_TIM_GET_AUTORELOAD(&htim1);
+void Motor_Backward() {
+    //if (speed > __HAL_TIM_GET_AUTORELOAD(&htim1)) speed = __HAL_TIM_GET_AUTORELOAD(&htim1);
 
     __HAL_TIM_SET_COMPARE(&htim1, LPWM_A_CHANNEL, 0);
-    __HAL_TIM_SET_COMPARE(&htim1, RPWM_A_CHANNEL, speed);
+    __HAL_TIM_SET_COMPARE(&htim1, RPWM_A_CHANNEL, BACKWARD_SPEED);
 
     __HAL_TIM_SET_COMPARE(&htim1, LPWM_B_CHANNEL, 0);
-    __HAL_TIM_SET_COMPARE(&htim1, RPWM_B_CHANNEL, speed);
+    __HAL_TIM_SET_COMPARE(&htim1, RPWM_B_CHANNEL, BACKWARD_SPEED);
 }
 
 // Left: left motor slower, right motor full
@@ -66,6 +66,22 @@ void Motor_Right(void) {
 
     __HAL_TIM_SET_COMPARE(&htim1, LPWM_B_CHANNEL, TURN_SPEED); // Right motor 60%
     __HAL_TIM_SET_COMPARE(&htim1, RPWM_B_CHANNEL, 0);
+}
+
+void Motor_SharpLeft(void) {
+    __HAL_TIM_SET_COMPARE(&htim1, LPWM_A_CHANNEL, 0); // Left motor 60%
+    __HAL_TIM_SET_COMPARE(&htim1, RPWM_A_CHANNEL, TURN_SPEED);
+
+    __HAL_TIM_SET_COMPARE(&htim1, LPWM_B_CHANNEL, MAX_SPEED);  // Right motor 100%
+    __HAL_TIM_SET_COMPARE(&htim1, RPWM_B_CHANNEL, 0);
+}
+
+void Motor_SharpRight(void) {
+    __HAL_TIM_SET_COMPARE(&htim1, LPWM_A_CHANNEL, MAX_SPEED);  // Left motor 100%
+    __HAL_TIM_SET_COMPARE(&htim1, RPWM_A_CHANNEL, 0);
+
+    __HAL_TIM_SET_COMPARE(&htim1, LPWM_B_CHANNEL, 0); // Right motor 60%
+    __HAL_TIM_SET_COMPARE(&htim1, RPWM_B_CHANNEL, MAX_SPEED);
 }
 
 // Stop: all channels off
