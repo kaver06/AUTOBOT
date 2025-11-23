@@ -1,0 +1,10 @@
+10:32:27 **** Incremental Build of configuration Debug for project AutoBot ****
+make -j8 all 
+arm-none-eabi-size  AutoBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  75344	    492	   5724	  81560	  13e98	AutoBot.elf
+Finished building: default.size.stdout
+ 
+
+10:32:29 Build Finished. 0 errors, 0 warnings. (took 2s.185ms)
+
