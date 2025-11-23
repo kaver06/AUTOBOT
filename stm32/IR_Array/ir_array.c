@@ -8,6 +8,7 @@
 #include "ir_array.h"
 #include "motor_control.h"
 
+
 /*
  * left ir PA0
  * mid left PA1
@@ -18,7 +19,6 @@
 // Assign pins and ports for 4 sensors
 const uint16_t ir_pins[IR_COUNT]  = {GPIO_PIN_0, GPIO_PIN_1, GPIO_PIN_4, GPIO_PIN_0};
 GPIO_TypeDef* ir_ports[IR_COUNT]  = {GPIOA, GPIOA, GPIOA, GPIOB};
-
 void IR_Array_Read(IR_Array_T *ir_data)
 {
     for (int i = 0; i < IR_COUNT; i++)
@@ -41,8 +41,10 @@ uint8_t IR_Array_GetPattern(IR_Array_T *ir_data)
 
 void IR_Decision(IR_Array_T *ir_data)
 {
+	static uint8_t stop_command =0;
+	static uint8_t triggered = 0;
+	static uint8_t startoff_command=0;
     uint8_t pattern = IR_Array_GetPattern(ir_data);
-	uint8_t stop_command =0;
 	switch(pattern) {
 	    case 0b0000: Motor_Forward();break;
 	    case 0b0100: Motor_Left();break;
@@ -51,6 +53,25 @@ void IR_Decision(IR_Array_T *ir_data)
 	    case 0b1000: Motor_SharpLeft();break;
 	    case 0b1100: Motor_SharpLeft();break;
 	    case 0b0011: Motor_SharpRight();break;
-	    case 0b1111: Motor_SharpLeft();stop_command++;break;
+	    case 0b1111: Motor_Stop();
+	    				stop_command++;
+						if(stop_command> 2 && !triggered)
+						{
+							startoff_command=0;
+							triggered=1;
+							HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, SET);
+						}
+							break;
+	}
+	// Reset triggered when not all sensors see black
+	if(pattern != 0b1111)
+	{
+		startoff_command++;
+		if(startoff_command>2)
+		{
+			stop_command = 0;
+			triggered = 0;
+			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, RESET);
+		}
 	}
 }
