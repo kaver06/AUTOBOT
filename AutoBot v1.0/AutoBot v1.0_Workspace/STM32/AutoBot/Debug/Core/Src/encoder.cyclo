@@ -1,0 +1,8 @@
+../Core/Src/encoder.c:31:6:encoder_init	1
+../Core/Src/encoder.c:54:6:encoder_tim_update_callback	7
+../Core/Src/encoder.c:90:9:encoder_get_left_position	2
+../Core/Src/encoder.c:102:9:encoder_get_right_position	2
+../Core/Src/encoder.c:113:7:encoder_get_left_degree	1
+../Core/Src/encoder.c:120:7:encoder_get_right_degree	1
+../Core/Src/encoder.c:127:6:read_load_encoder	1
+../Core/Src/encoder.c:135:6:encoder_reset_positions	2
