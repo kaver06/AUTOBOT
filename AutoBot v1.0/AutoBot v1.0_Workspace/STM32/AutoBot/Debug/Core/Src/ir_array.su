@@ -1,0 +1,3 @@
+../Core/Src/ir_array.c:24:6:IR_Array_Read	24	static
+../Core/Src/ir_array.c:33:9:IR_Array_GetPattern	24	static
+../Core/Src/ir_array.c:44:6:IR_Decision	24	static

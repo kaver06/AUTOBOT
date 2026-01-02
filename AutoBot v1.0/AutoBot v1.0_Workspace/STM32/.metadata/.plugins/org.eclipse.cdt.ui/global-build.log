@@ -1,0 +1,70 @@
+17:00:37 **** Incremental Build of configuration Debug for project AutoBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ir_array.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ir_array.d" -MT"Core/Src/ir_array.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ir_array.o"
+arm-none-eabi-gcc -o "AutoBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kaver\OneDrive\Desktop\C_files\STM32\Project AutoBot\AutoBot\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AutoBot.map" -Wl,--gc-sections -static -u_scanf_float -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AutoBot.elf
+ 
+arm-none-eabi-size  AutoBot.elf 
+arm-none-eabi-objdump -h -S AutoBot.elf  > "AutoBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  75704	    492	   6236	  82432	  14200	AutoBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: AutoBot.list
+ 
+10:34:07 **** Build of configuration Debug for project AutoBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "AutoBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kaver\OneDrive\Desktop\C_files\STM32\Project AutoBot\AutoBot\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AutoBot.map" -Wl,--gc-sections -static -u_scanf_float -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AutoBot.elf
+ 
+arm-none-eabi-size  AutoBot.elf 
+arm-none-eabi-objdump -h -S AutoBot.elf  > "AutoBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  75696	    492	   6236	  82424	  141f8	AutoBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: AutoBot.list
+ 
+11:11:28 **** Incremental Build of configuration Debug for project AutoBot ****
+make -j8 all 
+arm-none-eabi-size  AutoBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  75696	    492	   6236	  82424	  141f8	AutoBot.elf
+Finished building: default.size.stdout
+ 
+08:35:19 **** Build of configuration Debug for project AutoBot ****
+make -j8 all 
+arm-none-eabi-size  AutoBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  75696	    492	   6236	  82424	  141f8	AutoBot.elf
+Finished building: default.size.stdout
+ 
+08:41:11 **** Incremental Build of configuration Debug for project AutoBot ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "AutoBot.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kaver\OneDrive\Desktop\C_files\STM32\Project AutoBot\AutoBot\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AutoBot.map" -Wl,--gc-sections -static -u_scanf_float -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AutoBot.elf
+ 
+arm-none-eabi-size  AutoBot.elf 
+arm-none-eabi-objdump -h -S AutoBot.elf  > "AutoBot.list"
+   text	   data	    bss	    dec	    hex	filename
+  73952	    492	   6228	  80672	  13b20	AutoBot.elf
+Finished building: default.size.stdout
+ 
+Finished building: AutoBot.list
+ 
+08:47:27 **** Incremental Build of configuration Debug for project AutoBot ****
+make -j8 all 
+arm-none-eabi-size  AutoBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  73952	    492	   6228	  80672	  13b20	AutoBot.elf
+Finished building: default.size.stdout
+ 
+11:48:01 **** Incremental Build of configuration Debug for project AutoBot ****
+make -j8 all 
+arm-none-eabi-size  AutoBot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  73952	    492	   6228	  80672	  13b20	AutoBot.elf
+Finished building: default.size.stdout
+ 

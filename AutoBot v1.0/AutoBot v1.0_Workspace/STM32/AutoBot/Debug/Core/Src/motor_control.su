@@ -1,0 +1,8 @@
+../Core/Src/motor_control.c:20:6:Motor_Init	8	static
+../Core/Src/motor_control.c:33:6:Motor_Forward	4	static
+../Core/Src/motor_control.c:44:6:Motor_Backward	4	static
+../Core/Src/motor_control.c:55:6:Motor_Right	4	static
+../Core/Src/motor_control.c:64:6:Motor_Left	4	static
+../Core/Src/motor_control.c:72:6:Motor_SharpRight	4	static
+../Core/Src/motor_control.c:80:6:Motor_SharpLeft	4	static
+../Core/Src/motor_control.c:89:6:Motor_Stop	4	static

@@ -1,0 +1,4 @@
+../Core/Src/battery_status.c:21:6:Start_Battery_ADC_Read	2
+../Core/Src/battery_status.c:30:7:BatteryMonitor_GetVoltage	1
+../Core/Src/battery_status.c:39:6:BatteryMonitor_Init	1
+../Core/Src/battery_status.c:49:6:HAL_ADC_ConvCpltCallback	2
