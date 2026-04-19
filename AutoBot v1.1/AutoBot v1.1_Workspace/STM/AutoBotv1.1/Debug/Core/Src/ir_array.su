@@ -1,4 +1,0 @@
-../Core/Src/ir_array.c:22:6:IR_Array_Read	24	static
-../Core/Src/ir_array.c:30:6:IR_PrintPatternBinary	32	static
-../Core/Src/ir_array.c:44:9:IR_Array_GetPattern	24	static
-../Core/Src/ir_array.c:56:6:IR_PatternMonitor	16	static

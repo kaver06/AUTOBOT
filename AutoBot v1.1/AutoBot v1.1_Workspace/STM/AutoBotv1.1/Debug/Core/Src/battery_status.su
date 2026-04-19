@@ -1,5 +1,0 @@
-../Core/Src/battery_status.c:24:6:Start_Battery_ADC_Read	8	static
-../Core/Src/battery_status.c:33:6:BatteryMonitor_Init	8	static
-../Core/Src/battery_status.c:42:6:BatteryMonitor_Get	16	static,ignoring_inline_asm
-../Core/Src/battery_status.c:50:6:HAL_ADC_ConvCpltCallback	16	static
-../Core/Src/battery_status.c:60:6:Battery_Process	40	static

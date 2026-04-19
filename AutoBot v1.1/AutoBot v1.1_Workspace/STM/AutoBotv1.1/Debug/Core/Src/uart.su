@@ -1,3 +1,0 @@
-../Core/Src/uart.c:20:6:UART1_Init	8	static
-../Core/Src/uart.c:31:6:UART1_SendString	16	static
-../Core/Src/uart.c:45:6:UART1_ProcessReceivedData	32	static
