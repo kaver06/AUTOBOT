@@ -1,0 +1,3 @@
+../Core/Src/imu.c:21:6:mpu9250_init	4
+../Core/Src/imu.c:64:6:mpu9250_parse_accel_gyro	1
+../Core/Src/imu.c:83:6:mpu9250_read_mag	3
