@@ -55,16 +55,16 @@ It combines sensor fusion, motor control, and modular design to perform navigati
 
 ---
 
-## 📂 Project Structure (Updated)
-🔹 Core System Versions
-**AutoBot v1.0**
-- → Hardware calibration + sensor data acquisition
-- → Interrupt & timer-based control (bare-metal style)
-- → Line following and path execution using direct sensor logic
-- **AutoBot v1.1**
-- → Full upgrade of v1.0 with FreeRTOS integration
-- → Task-based architecture (motor control, sensing, communication)
-- → State machine-driven execution for scalable autonomy
+## 📂 Project Structure
+### 🔹 Core System Versions
+#### AutoBot v1.0
+- Hardware calibration + sensor data acquisition  
+- Interrupt & timer-based control (bare-metal)  
+- Line following and path execution using direct sensor logic  
+#### AutoBot v1.1
+- Full upgrade of v1.0 with FreeRTOS integration  
+- Task-based architecture (motor control, sensing, communication)  
+- State machine-driven execution for scalable autonomy  
 
 ---
 
