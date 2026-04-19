@@ -69,20 +69,30 @@ It combines sensor fusion, motor control, and modular design to perform navigati
 
 ## 📌 Current Status  
 
-- ✅ Motor driver tested (forward, backward, turns)  
-- ✅ Basic modular code structure in progress 
-- 🔄 AprilTag-based localization in progress (ESP32 library)  
-- 🔄 Firebase integration with mobile app prototype in progress  
+✅ Full FreeRTOS integration across STM32 modules (task-based architecture with state machines)
+✅ Modular code structure implemented (motor_control, sensing, communication)
+✅ Custom Python-based GUI developed for real-time monitoring, debugging, and data logging
+🔄 AprilTag-based localization in progress (ESP32 + pose estimation)
+🔄 Firebase integration with mobile app prototype complete
+
 
 ---
 
 ## 🎯 Future Plans  
 
-- Full RTOS implementation across all modules  
-- Autonomous navigation with dynamic obstacle handling  
-- Cloud logging of delivery paths and performance  
-- Mobile app with Firebase for user-side delivery requests, robot status, and notifications  
-- Expandable payload system  
+- Tight ROS 2 integration with Raspberry Pi as high-level controller
+- Navigation stack (path planning, mapping, visualization)
+- ROS 2 nodes for sensor fusion, control commands, and telemetry
+- Integrate Python GUI with ROS 2 ecosystem
+- Subscribe to ROS 2 topics for real-time visualization
+- Logging and playback of robot telemetry (rosbag or custom logger)
+- Debug interface for testing individual modules (motor, sensors, localization)
+- STM32 ↔ ROS 2 bridge (via UART/Wi-Fi using ESP32 or direct serial interface)
+- Autonomous navigation with dynamic obstacle handling (ROS 2 decision layer + STM32 execution layer)
+- Cloud logging of delivery paths and performance (Firebase + ROS 2 data streams)
+- Mobile app with Firebase for user-side delivery requests, robot status, and notifications
+- Fully optimized self-docking using sensor fusion + ROS 2 feedback loop
+- Expandable payload system with task-based delivery scheduling
 
 ---
 
