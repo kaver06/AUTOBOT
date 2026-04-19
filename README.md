@@ -55,15 +55,16 @@ It combines sensor fusion, motor control, and modular design to perform navigati
 
 ---
 
-## 📂 Project Modules  
-
-- `motor_control/` → Low-level motor drivers (HAL, STM32)  
-- `line_follower/` → Line following algorithm (IR sensors)  
-- `obstacle_avoidance/` → Ultrasonic/IR-based avoidance logic  
-- `localization/` → ESP32 AprilTag detection + IMU + encoder fusion  
-- `docking/` → Charging station docking logic  
-- `communication/` → ESP32 ↔ STM32 bridge  
-- `firebase_integration/` → Firebase database + mobile app sync for task allocation and status updates  
+## 📂 Project Structure (Updated)
+🔹 Core System Versions
+AutoBot v1.0
+→ Hardware calibration + sensor data acquisition
+→ Interrupt & timer-based control (bare-metal style)
+→ Line following and path execution using direct sensor logic
+AutoBot v1.1
+→ Full upgrade of v1.0 with FreeRTOS integration
+→ Task-based architecture (motor control, sensing, communication)
+→ State machine-driven execution for scalable autonomy
 
 ---
 
